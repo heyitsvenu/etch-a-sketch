@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100px auto;
+  grid-template-areas:
+    "header header"
+    "buttons container";
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header h1 {
+  text-align: center;
+}
+
+#buttons {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  grid-area: buttons;
+}
+
+#buttons button {
+  width: 7rem;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 17px;
+  background-color: #555;
+  color: #ddd;
+  transition: transform 0.17s ease;
+}
+#buttons button:hover {
+  transform: scale(1.1);
+}
+
+#container {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  border-left: 1px solid #555;
+  display: grid;
+  place-content: center;
+  margin: 25px;
+  /* padding: 25px; */
+  grid-area: container;
+  background-color: white;
+}
+
+.cell {
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+}
